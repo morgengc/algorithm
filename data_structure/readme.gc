@@ -1,0 +1,15 @@
+假如这样定义List的数据结构:
+
+typedef struct Node {
+	struct Node *next;
+	int data;
+} Node, *pNode;
+
+typedef struct List {
+	Node *head;
+} List, *pList;
+
+那么，检查程序是否有漏洞的一个很简单办法就是，看看在引用index->data时，index是否可能为NULL。虽然经过小规模测试可能测不出问题，但是不意味着程序就没有BUG。
+
+这种检查的方法非常有效，而且一目了然。包括《程序员面试宝典》在内的书，其实里面的代码都犯了这样的错误。
+

@@ -1,0 +1,3 @@
+Q: How to implement algorithm QA?
+A: type "make -f Makefile.verifier" to generate test binary, and run it.
+
